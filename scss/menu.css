@@ -105,7 +105,6 @@ a {
 .btn-wrap .btn {
   padding: 1.2rem 0;
   color: #FFF;
-  z-index: 2;
 }
 .btn-wrap .btn-border {
   width: 100%;
@@ -114,6 +113,15 @@ a {
   position: absolute;
   bottom: 5px;
   right: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+.btn-wrap .btn-border:active {
+  transform: translate(5px, 5px);
+}
+.btn-wrap .btn-border:hover {
+  cursor: pointer;
 }
 
 .banner {

@@ -129,7 +129,6 @@ a {
     .btn {
         padding: 1.2rem 0;
         color: $neutral-white;
-        z-index: 2;
     }
 
     .btn-border {
@@ -139,5 +138,16 @@ a {
         position: absolute;
         bottom: 5px;
         right: 5px;
+        z-index: 2;
+        box-sizing: border-box;
+        transition: all 0.15s;
+
+        &:active {
+            transform: translate(5px, 5px);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

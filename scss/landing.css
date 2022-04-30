@@ -105,7 +105,6 @@ a {
 .btn-wrap .btn {
   padding: 1.2rem 0;
   color: #FFF;
-  z-index: 2;
 }
 .btn-wrap .btn-border {
   width: 100%;
@@ -114,6 +113,15 @@ a {
   position: absolute;
   bottom: 5px;
   right: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+.btn-wrap .btn-border:active {
+  transform: translate(5px, 5px);
+}
+.btn-wrap .btn-border:hover {
+  cursor: pointer;
 }
 
 .banner {
@@ -226,6 +234,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  gap: 3rem;
 }
 .discount__info .discount__context {
   display: flex;
@@ -256,6 +265,13 @@ a {
   width: 400px;
   height: 400px;
 }
+.discount__info .discount__img-wrap .discount__img {
+  z-index: 2;
+}
+.discount__info .discount__img-wrap .discount__img:hover {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
 .discount__info .discount__img-wrap .discount__img--border {
   width: 400px;
   height: 400px;
@@ -280,6 +296,8 @@ a {
   font-size: 2.813rem;
   padding: 2.5rem 1.25rem;
   text-align: center;
+  -webkit-animation: flash 2.5s infinite;
+          animation: flash 2.5s infinite;
 }
 .discount__banner-wrap .discount__text {
   color: #FFF;
@@ -287,4 +305,44 @@ a {
 .discount__banner-wrap .discount__text .discount__coupon {
   font-weight: 700;
   color: inherit;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
+@keyframes flash {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
 }/*# sourceMappingURL=landing.css.map */

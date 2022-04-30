@@ -34,7 +34,6 @@
 
 
 .product {
-
     @include section($neutral-lightgrey, row, 4rem 1.25rem);
     gap: 2rem;
 
@@ -109,6 +108,7 @@
 
 .discount__info {
     @include section($neutral-white, row, 4rem 1.25rem);
+    gap: 3rem;
 
     .discount__context {
         display: flex;
@@ -144,6 +144,14 @@
         width: 400px;
         height: 400px;
 
+        .discount__img {
+            z-index: 2;
+        }
+
+        .discount__img:hover {
+            animation: spin 2s infinite linear;
+        }
+
         .discount__img--border {
             width: 400px;
             height: 400px;
@@ -153,10 +161,6 @@
             right: 20px;
         }
     }
-
-
-
-
 }
 
 
@@ -164,12 +168,15 @@
 
     @include section($neutral-white, row, 4rem 1.25rem);
 
+
     .discount__banner {
         background-color: $neutral-graphite;
         width: 68%;
         font-size: 2.813rem;
         padding: 2.5rem 1.25rem;
         text-align: center;
+        animation: flash 2.5s infinite;
+
     }
 
     .discount__text {
@@ -179,5 +186,29 @@
             font-weight: 700;
             color: inherit;
         }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: $neutral-graphite;
+    }
+
+    50% {
+        background-color: $primary-blue;
+    }
+
+    100% {
+        background-color: $neutral-graphite;
     }
 }
