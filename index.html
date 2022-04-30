@@ -29,11 +29,14 @@
                 <p class="banner__description">Coffee is a brewed drink prepared from roasted coffee beans, the seeds of
                     berries from certain Coffea
                     species.</p>
-                <a class="btn banner__btn" href="./pages/menu.html">SHOP NOW</a>
+                <div class="btn-wrap">
+                    <a class="btn banner__btn" href="./pages/menu.html">SHOP NOW</a>
+                    <div class="btn-border"></div>
+                </div>
             </div>
-            <div class="banner__img">
-                <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag">
-            </div>
+
+            <img class="banner__img" src="./assets/images/coffeebeans-hero.png" alt="coffee bag">
+
         </div>
     </header>
     <main class="main">
@@ -65,7 +68,10 @@
                     </div>
                 </div>
             </div>
-            <a class="btn product__btn" href="./pages/menu.html">VIEW ALL</a>
+            <div class="btn-wrap">
+                <a class="btn product__btn" href="./pages/menu.html">VIEW ALL</a>
+                <div class="btn-border"></div>
+            </div>
         </section>
 
         <div class="discount">
@@ -81,10 +87,14 @@
                         <img class="icon discount__icon" src="./assets/logos/coffee-beans.svg" alt="coffee-beans logo">
                         <img class="icon discount__icon" src="./assets/logos/coffee-cup.svg" alt="coffee-cup logo">
                     </div>
-                    <a class="btn discount__btn" href="./index.html">Learn More</a>
+                    <div class="btn-wrap">
+                        <a class="btn discount__btn" href="./index.html">Learn More</a>
+                        <div class="btn-border"></div>
+                    </div>
                 </div>
-                <div class="discount__img">
-                    <img class="discount__imgCan product__img" src="./assets/images/tiltedcan.png" alt="tilted can">
+                <div class="discount__img-wrap">
+                    <img class="product__img" src="./assets/images/tiltedcan.png" alt="tilted can">
+                    <div class="discount__img--border"></div>
                 </div>
             </div>
             <div class="discount__banner-wrap">
@@ -96,6 +106,8 @@
         </div>
     </main>
     <footer class="footer">
+        <img class="footer__background-icon footer__background-icon--left"
+            src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="footer background icon">
         <div class="footer__section">
             <h3 class="footer__title">Address</h3>
             <address class="footer__text">
@@ -117,6 +129,8 @@
             <a href="http://www.instagram.com"><img class="icon footer__icon" src="./assets/logos/Instagram-Icon.svg"
                     alt="instagram"></a>
         </div>
+        <img class="footer__background-icon footer__background-icon--right"
+            src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="footer background icon">
     </footer>
 
 </body>

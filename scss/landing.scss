@@ -4,13 +4,11 @@
 
 
 .banner {
-    @include section($primary-pink, row);
+    @include section($primary-pink, row, 4rem 1.25rem);
 
     .banner__img {
-        text-align: right;
         padding: 5rem 0;
         display: inline-block;
-        width: 30vw;
         vertical-align: middle;
     }
 
@@ -36,7 +34,8 @@
 
 
 .product {
-    @include section($neutral-lightgrey, column);
+
+    @include section($neutral-lightgrey, row, 4rem 1.25rem);
     gap: 2rem;
 
     .product__headline {
@@ -50,6 +49,7 @@
         flex-wrap: wrap;
         width: 100%;
         gap: 1.5rem;
+        margin-bottom: 1rem;
 
         .product__card {
             background-color: $neutral-white;
@@ -64,16 +64,15 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-            align-content: flex-end;
+            align-content: space-between;
+            align-items: center;
 
             .product__img {
-                min-height: 15rem;
-                max-height: 34.375rem;
-                margin: 20px;
+                margin-top: 2rem;
             }
 
             .product__text {
-                height: 10.5rem;
+                height: 9rem;
                 width: 100vw;
                 background-color: #FFF0ED;
                 border-radius: 0 0 0.625rem 0.625rem;
@@ -82,6 +81,7 @@
                 flex-wrap: wrap;
                 align-content: space-between;
                 justify-content: center;
+                box-sizing: border-box;
 
                 .product__name {
                     margin: 1rem 1rem 0 1rem;
@@ -108,17 +108,14 @@
 }
 
 .discount__info {
-    @include section($neutral-white, row);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include section($neutral-white, row, 4rem 1.25rem);
 
     .discount__context {
         display: flex;
         flex-direction: column;
-        width: 35vw;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        width: 40rem;
+        gap: 1.45rem;
+
 
         .discount__slogan {
             font-size: 3.75rem;
@@ -138,25 +135,38 @@
         }
     }
 
-    .discount__img {
-        background-image: url("../assets/images/coldbrewbackground.png");
-        background-size: cover;
-        width: 400px;
-        height: 400px;
+    .discount__img-wrap {
+        background: center / cover no-repeat url("../assets/images/coldbrewbackground.png");
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        width: 400px;
+        height: 400px;
+
+        .discount__img--border {
+            width: 400px;
+            height: 400px;
+            border: solid $primary-blue 5px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
     }
+
+
+
+
 }
 
 
 .discount__banner-wrap {
 
-    @include section(none, row);
+    @include section($neutral-white, row, 4rem 1.25rem);
 
     .discount__banner {
         background-color: $neutral-graphite;
-        width: 60%;
+        width: 68%;
         font-size: 2.813rem;
         padding: 2.5rem 1.25rem;
         text-align: center;

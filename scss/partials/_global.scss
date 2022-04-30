@@ -4,13 +4,14 @@ $neutral-graphite:#393939;
 $neutral-lightgrey: #F7F7F7;
 $neutral-white: #FFF;
 
-@mixin section($background, $flex-direction) {
+@mixin section($background, $flex-direction, $padding) {
     background: $background;
-    padding: 4rem 1.25rem;
+    padding: $padding;
     display: flex;
     flex-direction: $flex-direction;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 * {
@@ -19,6 +20,11 @@ $neutral-white: #FFF;
     padding: 0;
     font-family: "Open Sans";
     font-weight: 400;
+}
+
+
+ul {
+    list-style-type: none;
 }
 
 a {
@@ -63,7 +69,27 @@ a {
 
 
 .footer {
-    @include section($primary-pink, row);
+    @include section($primary-pink, row, 4rem 1.25rem);
+    position: relative;
+    overflow: hidden;
+
+    &__background-icon {
+        position: absolute;
+        min-width: 120px;
+        max-width: 240px;
+        opacity: 0.25;
+
+        &--left {
+            left: -30px;
+            top: 20px;
+        }
+
+        &--right {
+            right: -30px;
+            bottom: 20px;
+        }
+
+    }
 
     .footer__section {
         margin: 1.25rem 0;
@@ -89,13 +115,29 @@ a {
     }
 }
 
-.btn {
+.btn-wrap {
     background-color: $primary-blue;
     font-size: 1.313rem;
-    width: 11.25rem;
-    // max-width: 80%;
-    padding: 1.25rem;
+    width: 11.5rem;
     color: $neutral-white;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+
+    .btn {
+        padding: 1.2rem 0;
+        color: $neutral-white;
+        z-index: 2;
+    }
+
+    .btn-border {
+        width: 100%;
+        height: 100%;
+        border: solid 2px $neutral-graphite;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
 }

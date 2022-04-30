@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -49,6 +53,23 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.footer__background-icon {
+  position: absolute;
+  min-width: 120px;
+  max-width: 240px;
+  opacity: 0.25;
+}
+.footer__background-icon--left {
+  left: -30px;
+  top: 20px;
+}
+.footer__background-icon--right {
+  right: -30px;
+  bottom: 20px;
 }
 .footer .footer__section {
   margin: 1.25rem 0;
@@ -70,26 +91,29 @@ a {
   font-weight: 700;
 }
 
-.btn {
+.btn-wrap {
   background-color: #5BACC3;
   font-size: 1.313rem;
-  width: 11.25rem;
-  padding: 1.25rem;
+  width: 11.5rem;
   color: #FFF;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
 }
-
-.btn {
-  background-color: #5BACC3;
-  font-size: 1.313rem;
-  min-width: 11.25rem;
-  max-width: 80%;
-  padding: 1.25rem;
+.btn-wrap .btn {
+  padding: 1.2rem 0;
   color: #FFF;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  z-index: 2;
+}
+.btn-wrap .btn-border {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #393939;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .banner {
@@ -99,12 +123,11 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .banner .banner__img {
-  text-align: right;
   padding: 5rem 0;
   display: inline-block;
-  width: 30vw;
   vertical-align: middle;
 }
 .banner .banner__intro {
@@ -128,9 +151,10 @@ a {
   background: #F7F7F7;
   padding: 4rem 1.25rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .product .product__headline {
@@ -143,6 +167,7 @@ a {
   flex-wrap: wrap;
   width: 100%;
   gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 .product .product__container .product__card {
   background-color: #FFF;
@@ -157,15 +182,14 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-end;
+  align-content: space-between;
+  align-items: center;
 }
 .product .product__container .product__card .product__img {
-  min-height: 15rem;
-  max-height: 34.375rem;
-  margin: 20px;
+  margin-top: 2rem;
 }
 .product .product__container .product__card .product__text {
-  height: 10.5rem;
+  height: 9rem;
   width: 100vw;
   background-color: #FFF0ED;
   border-radius: 0 0 0.625rem 0.625rem;
@@ -174,6 +198,7 @@ a {
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: center;
+  box-sizing: border-box;
 }
 .product .product__container .product__card .product__text .product__name {
   margin: 1rem 1rem 0 1rem;
@@ -200,16 +225,13 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .discount__info .discount__context {
   display: flex;
   flex-direction: column;
-  width: 35vw;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  width: 40rem;
+  gap: 1.45rem;
 }
 .discount__info .discount__context .discount__slogan {
   font-size: 3.75rem;
@@ -225,27 +247,36 @@ a {
   width: 100%;
   justify-content: space-between;
 }
-.discount__info .discount__img {
-  background-image: url("../assets/images/coldbrewbackground.png");
-  background-size: cover;
-  width: 400px;
-  height: 400px;
+.discount__info .discount__img-wrap {
+  background: center/cover no-repeat url("../assets/images/coldbrewbackground.png");
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.discount__info .discount__img-wrap .discount__img--border {
+  width: 400px;
+  height: 400px;
+  border: solid #5BACC3 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .discount__banner-wrap {
-  background: none;
+  background: #FFF;
   padding: 4rem 1.25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .discount__banner-wrap .discount__banner {
   background-color: #393939;
-  width: 60%;
+  width: 68%;
   font-size: 2.813rem;
   padding: 2.5rem 1.25rem;
   text-align: center;

@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -49,6 +53,23 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.footer__background-icon {
+  position: absolute;
+  min-width: 120px;
+  max-width: 240px;
+  opacity: 0.25;
+}
+.footer__background-icon--left {
+  left: -30px;
+  top: 20px;
+}
+.footer__background-icon--right {
+  right: -30px;
+  bottom: 20px;
 }
 .footer .footer__section {
   margin: 1.25rem 0;
@@ -70,135 +91,128 @@ a {
   font-weight: 700;
 }
 
-.btn {
+.btn-wrap {
   background-color: #5BACC3;
   font-size: 1.313rem;
-  width: 11.25rem;
-  padding: 1.25rem;
+  width: 11.5rem;
   color: #FFF;
-  display: inline-block;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.banner {
-  background-color: #FFF0ED;
-  padding: 1.25rem;
-}
-
-h3 {
-  font-size: 2.063rem;
-  font-weight: 300;
-  text-align: center;
-}
-
-h1,
-.menu__name {
-  font-size: 3.75rem;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.banner {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.btn-wrap .btn {
+  padding: 1.2rem 0;
+  color: #FFF;
+  z-index: 2;
+}
+.btn-wrap .btn-border {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #393939;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.banner {
+  background: center/cover no-repeat url("../assets/images/coffee-circle.jpg");
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.banner__headline,
-.product__headline,
-.discount__slogan {
-  font-size: 3.75rem;
-  font-weight: 300;
-}
-
-.banner {
-  max-width: 100%;
-  min-width: 100%;
+  flex-wrap: wrap;
   min-height: 35.938rem;
   max-height: 37.5rem;
-  background-image: url("../assets/images/coffee-circle.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
 }
-
-.banner__title {
+.banner .banner__title-box, .banner .banner__title-box .banner__title-box--border, .banner .banner__title-box .banner__title {
   min-width: 17.5rem;
   max-width: 18.75rem;
   min-height: 11.25rem;
   max-height: 12.5rem;
-  background-color: #393939;
-  color: #FFF0ED;
+  position: absolute;
+}
+.banner .banner__title-box .banner__title {
+  background: #393939;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
+  color: #FFF;
+}
+.banner .banner__title-box .banner__title-box--border {
+  border: solid #5BACC3 5px;
+  bottom: 5px;
+  right: 5px;
 }
 
-.subNav {
-  max-width: 100%;
-  min-width: 100%;
+.sub-nav {
+  background: #393939;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
   min-height: 3.75rem;
   max-height: 5rem;
-  background-color: #393939;
-  text-align: center;
   text-transform: uppercase;
-  display: block;
+  box-sizing: border-box;
 }
-
-.subNav__list {
-  padding: 1rem;
-}
-
-.subNav__item {
+.sub-nav__item {
   font-size: 1.313rem;
   border-left: solid #5BACC3 4px;
   display: inline-block;
   text-align: center;
   padding: 0 2rem;
 }
-
-.subNav a {
+.sub-nav__item a {
   color: white;
 }
 
-.menu__category {
+.menu {
+  background: #FFF0ED;
   padding: 1.3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-.menu__hotDrinks,
-.menu__pastries {
-  background-color: #FFF0ED;
-}
-
-.menu__coldDrinks {
-  background-color: #F7F7F7;
-}
-
-.menu__description,
-.menu__price {
+.menu .menu__category {
+  padding: 1.7rem 0;
+  width: 60%;
+  margin: auto;
   text-align: center;
   font-size: 1.125rem;
-  font-weight: 400;
 }
-
-.menu__price {
-  color: #5BACC3;
-  margin: 0.3rem 0;
+.menu .menu__category .menu__name {
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
 }
-
-.menu__description {
+.menu .menu__category .menu__item {
+  font-size: 2.063rem;
+  font-weight: 300;
+  text-align: center;
+}
+.menu .menu__category .menu__description {
   font-style: italic;
-  width: 45%;
   color: #393939;
-  margin: auto;
+  margin: 0.8rem 0;
+}
+.menu .menu__category .menu__price {
+  color: #5BACC3;
+}
+.menu .menu__coldDrinks {
+  background-color: #F7F7F7;
+  width: 100%;
 }/*# sourceMappingURL=menu.css.map */
