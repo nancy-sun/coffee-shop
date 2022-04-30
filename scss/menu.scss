@@ -1,0 +1,130 @@
+@use './partials/global'as *;
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.banner {
+    background-color: #FFF0ED;
+    padding: 1.25rem;
+}
+
+
+h3 {
+    font-size: 2.063rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+h1,
+.menu__name {
+    font-size: 3.75rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner__headline,
+.product__headline,
+.discount__slogan {
+    font-size: 3.75rem;
+    font-weight: 300;
+}
+
+
+.banner {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 35.938rem;
+    max-height: 37.5rem;
+    background-image: url("../assets/images/coffee-circle.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+.banner__title {
+    min-width: 17.5rem;
+    max-width: 18.75rem;
+    min-height: 11.25rem;
+    max-height: 12.5rem;
+    background-color: #393939;
+    color: #FFF0ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subNav {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 3.75rem;
+    max-height: 5rem;
+    background-color: #393939;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+}
+
+.subNav__list {
+    padding: 1rem;
+}
+
+.subNav__item {
+    font-size: 1.313rem;
+    border-left: solid #5BACC3 4px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.subNav a {
+    color: white;
+}
+
+.menu__category {
+    padding: 1.3rem 0;
+}
+
+
+.menu__hotDrinks,
+.menu__pastries {
+    background-color: #FFF0ED;
+}
+
+.menu__coldDrinks {
+    background-color: #F7F7F7;
+}
+
+.menu__description,
+.menu__price {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.menu__price {
+    color: #5BACC3;
+    margin: 0.3rem 0;
+}
+
+.menu__description {
+    font-style: italic;
+    width: 45%;
+    color: #393939;
+    margin: auto;
+}

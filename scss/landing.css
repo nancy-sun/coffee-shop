@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  color: #393939;
+  padding: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  min-width: 3.125rem;
+  max-width: 7.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: #FFF0ED;
+  padding: 1.25rem;
+}
+.nav .nav__brandName {
+  text-decoration: none;
+  font-size: 3.75rem;
+  font-weight: 300;
+  display: inline-block;
+}
+.nav .nav__list {
+  font-size: 1.313rem;
+  font-weight: 300;
+}
+.nav .nav__list .nav__item {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.313rem;
+  font-weight: 400;
+}
+.nav .nav__list .nav__item .nav__shop {
+  color: #5BACC3;
+}
+
+.footer {
+  background: #FFF0ED;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer .footer__section {
+  margin: 1.25rem 0;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: content-box;
+  margin: 0 6.25rem;
+}
+.footer .footer__section .footer__title {
+  font-size: 2.063rem;
+  font-weight: 300;
+  margin: 2.5rem 0;
+}
+.footer .footer__section .footer__text {
+  font-size: 1.125rem;
+  font-style: normal;
+}
+.footer .footer__section .footer__text .footer__span {
+  font-weight: 700;
+}
+
+.btn {
+  background-color: #5BACC3;
+  font-size: 1.313rem;
+  width: 11.25rem;
+  padding: 1.25rem;
+  color: #FFF;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn {
+  background-color: #5BACC3;
+  font-size: 1.313rem;
+  min-width: 11.25rem;
+  max-width: 80%;
+  padding: 1.25rem;
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.banner {
+  background: #FFF0ED;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.banner .banner__img {
+  text-align: right;
+  padding: 5rem 0;
+  display: inline-block;
+  width: 30vw;
+  vertical-align: middle;
+}
+.banner .banner__intro {
+  width: 25vw;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.banner .banner__intro .banner__headline {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+.banner .banner__intro .banner__description {
+  font-size: 1.125rem;
+  font-style: normal;
+}
+
+.product {
+  background: #F7F7F7;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+.product .product__headline {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+.product .product__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.5rem;
+}
+.product .product__container .product__card {
+  background-color: #FFF;
+  min-width: 20.625rem;
+  max-width: 21.875rem;
+  min-height: 27.5rem;
+  max-height: 28.75rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.313rem 0.563rem -0.063rem rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+}
+.product .product__container .product__card .product__img {
+  min-height: 15rem;
+  max-height: 34.375rem;
+  margin: 20px;
+}
+.product .product__container .product__card .product__text {
+  height: 10.5rem;
+  width: 100vw;
+  background-color: #FFF0ED;
+  border-radius: 0 0 0.625rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+.product .product__container .product__card .product__text .product__name {
+  margin: 1rem 1rem 0 1rem;
+  font-size: 2.063rem;
+  font-weight: inherit;
+}
+.product .product__container .product__card .product__text .product__size {
+  color: #909090;
+  font-size: 18px;
+  margin: 0 1rem 1rem 1rem;
+}
+.product .product__container .product__card .product__text .product__price {
+  font-size: 2.063rem;
+  font-weight: inherit;
+  color: #5BACC3;
+  align-self: flex-end;
+  margin: 1.2rem;
+}
+
+.discount__info {
+  background: #FFF;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.discount__info .discount__context {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.discount__info .discount__context .discount__slogan {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+.discount__info .discount__context .discount__description {
+  font-size: 1.125rem;
+  font-style: normal;
+}
+.discount__info .discount__context .discount__logos {
+  display: flex;
+  height: 3.3rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.discount__info .discount__img {
+  background-image: url("../assets/images/coldbrewbackground.png");
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount__banner-wrap {
+  background: none;
+  padding: 4rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.discount__banner-wrap .discount__banner {
+  background-color: #393939;
+  width: 60%;
+  font-size: 2.813rem;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+.discount__banner-wrap .discount__text {
+  color: #FFF;
+}
+.discount__banner-wrap .discount__text .discount__coupon {
+  font-weight: 700;
+  color: inherit;
+}/*# sourceMappingURL=landing.css.map */

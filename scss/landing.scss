@@ -1,0 +1,173 @@
+@use './partials/global'as *;
+
+
+
+
+.banner {
+    @include section($primary-pink, row);
+
+    .banner__img {
+        text-align: right;
+        padding: 5rem 0;
+        display: inline-block;
+        width: 30vw;
+        vertical-align: middle;
+    }
+
+    .banner__intro {
+        width: 25vw;
+        height: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        .banner__headline {
+            font-size: 3.75rem;
+            font-weight: 300;
+        }
+
+        .banner__description {
+            font-size: 1.125rem;
+            font-style: normal;
+        }
+    }
+}
+
+
+.product {
+    @include section($neutral-lightgrey, column);
+    gap: 2rem;
+
+    .product__headline {
+        font-size: 3.75rem;
+        font-weight: 300;
+    }
+
+    .product__container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1.5rem;
+
+        .product__card {
+            background-color: $neutral-white;
+            min-width: 20.625rem;
+            max-width: 21.875rem;
+            min-height: 27.5rem;
+            max-height: 28.75rem;
+            border-radius: 0.625rem;
+            box-shadow: 0 0.313rem 0.563rem -0.063rem rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-end;
+
+            .product__img {
+                min-height: 15rem;
+                max-height: 34.375rem;
+                margin: 20px;
+            }
+
+            .product__text {
+                height: 10.5rem;
+                width: 100vw;
+                background-color: #FFF0ED;
+                border-radius: 0 0 0.625rem 0.625rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-between;
+                justify-content: center;
+
+                .product__name {
+                    margin: 1rem 1rem 0 1rem;
+                    font-size: 2.063rem;
+                    font-weight: inherit;
+                }
+
+                .product__size {
+                    color: #909090;
+                    font-size: 18px;
+                    margin: 0 1rem 1rem 1rem;
+                }
+
+                .product__price {
+                    font-size: 2.063rem;
+                    font-weight: inherit;
+                    color: $primary-blue;
+                    align-self: flex-end;
+                    margin: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.discount__info {
+    @include section($neutral-white, row);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .discount__context {
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        .discount__slogan {
+            font-size: 3.75rem;
+            font-weight: 300;
+        }
+
+        .discount__description {
+            font-size: 1.125rem;
+            font-style: normal;
+        }
+
+        .discount__logos {
+            display: flex;
+            height: 3.3rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    .discount__img {
+        background-image: url("../assets/images/coldbrewbackground.png");
+        background-size: cover;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.discount__banner-wrap {
+
+    @include section(none, row);
+
+    .discount__banner {
+        background-color: $neutral-graphite;
+        width: 60%;
+        font-size: 2.813rem;
+        padding: 2.5rem 1.25rem;
+        text-align: center;
+    }
+
+    .discount__text {
+        color: $neutral-white;
+
+        .discount__coupon {
+            font-weight: 700;
+            color: inherit;
+        }
+    }
+}
