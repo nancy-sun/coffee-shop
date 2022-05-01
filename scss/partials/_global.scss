@@ -1,18 +1,5 @@
-$primary-pink: #FFF0ED;
-$primary-blue:#5BACC3;
-$neutral-graphite:#393939;
-$neutral-lightgrey: #F7F7F7;
-$neutral-white: #FFF;
+@use "./variables"as*;
 
-@mixin section($background, $flex-direction, $padding) {
-    background: $background;
-    padding: $padding;
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 * {
     margin: 0;
@@ -37,28 +24,24 @@ a {
 }
 
 .nav {
-    display: flex;
+    @include section($primary-pink, row, 1.25rem 0);
     align-items: baseline;
-    justify-content: space-between;
-    background-color: $primary-pink;
-    padding: 1.25rem;
+    justify-content: space-around;
 
     .nav__brandName {
         text-decoration: none;
         font-size: 3.75rem;
-        font-weight: 300;
+        font-weight: $lighter-font;
         display: inline-block;
     }
 
     .nav__list {
-        font-size: 1.313rem;
-        font-weight: 300;
+        font-size: $mid-text;
+        text-transform: uppercase;
 
         .nav__item {
             display: inline-block;
             padding: 1rem;
-            font-size: 1.313rem;
-            font-weight: 400;
 
             .nav__shop {
                 color: $primary-blue;
@@ -88,20 +71,17 @@ a {
             right: -30px;
             bottom: 20px;
         }
-
     }
 
     .footer__section {
-        margin: 1.25rem 0;
         display: inline-block;
         vertical-align: top;
         box-sizing: content-box;
-        margin: 0 6.25rem;
 
         .footer__title {
             font-size: 2.063rem;
-            font-weight: 300;
-            margin: 2.5rem 0;
+            font-weight: $lighter-font;
+            margin: 2.3rem 0;
         }
 
         .footer__text {
@@ -117,7 +97,7 @@ a {
 
 .btn-wrap {
     background-color: $primary-blue;
-    font-size: 1.313rem;
+    font-size: $mid-text;
     width: 11.5rem;
     color: $neutral-white;
     display: flex;

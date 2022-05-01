@@ -20,11 +20,15 @@ a {
 }
 
 .nav {
+  background: #FFF0ED;
+  padding: 1.25rem 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  background-color: #FFF0ED;
-  padding: 1.25rem;
+  justify-content: space-around;
 }
 .nav .nav__brandName {
   text-decoration: none;
@@ -34,13 +38,11 @@ a {
 }
 .nav .nav__list {
   font-size: 1.313rem;
-  font-weight: 300;
+  text-transform: uppercase;
 }
 .nav .nav__list .nav__item {
   display: inline-block;
   padding: 1rem;
-  font-size: 1.313rem;
-  font-weight: 400;
 }
 .nav .nav__list .nav__item .nav__shop {
   color: #5BACC3;
@@ -72,16 +74,14 @@ a {
   bottom: 20px;
 }
 .footer .footer__section {
-  margin: 1.25rem 0;
   display: inline-block;
   vertical-align: top;
   box-sizing: content-box;
-  margin: 0 6.25rem;
 }
 .footer .footer__section .footer__title {
   font-size: 2.063rem;
   font-weight: 300;
-  margin: 2.5rem 0;
+  margin: 2.3rem 0;
 }
 .footer .footer__section .footer__text {
   font-size: 1.125rem;
@@ -132,6 +132,8 @@ a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
 }
 .banner .banner__img {
   padding: 5rem 0;
@@ -139,12 +141,12 @@ a {
   vertical-align: middle;
 }
 .banner .banner__intro {
-  width: 25vw;
-  height: 25vw;
+  width: 28vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+  gap: 2rem;
 }
 .banner .banner__intro .banner__headline {
   font-size: 3.75rem;
@@ -152,7 +154,6 @@ a {
 }
 .banner .banner__intro .banner__description {
   font-size: 1.125rem;
-  font-style: normal;
 }
 
 .product {
@@ -248,7 +249,6 @@ a {
 }
 .discount__info .discount__context .discount__description {
   font-size: 1.125rem;
-  font-style: normal;
 }
 .discount__info .discount__context .discount__logos {
   display: flex;
@@ -292,17 +292,18 @@ a {
 }
 .discount__banner-wrap .discount__banner {
   background-color: #393939;
-  width: 68%;
   font-size: 2.813rem;
-  padding: 2.5rem 1.25rem;
-  text-align: center;
+  padding: 2.5rem 5.8rem;
   -webkit-animation: flash 2.5s infinite;
           animation: flash 2.5s infinite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.discount__banner-wrap .discount__text {
+.discount__banner-wrap .discount__banner .discount__text {
   color: #FFF;
 }
-.discount__banner-wrap .discount__text .discount__coupon {
+.discount__banner-wrap .discount__banner .discount__text .discount__coupon {
   font-weight: 700;
   color: inherit;
 }

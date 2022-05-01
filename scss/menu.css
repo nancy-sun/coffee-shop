@@ -20,11 +20,15 @@ a {
 }
 
 .nav {
+  background: #FFF0ED;
+  padding: 1.25rem 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  background-color: #FFF0ED;
-  padding: 1.25rem;
+  justify-content: space-around;
 }
 .nav .nav__brandName {
   text-decoration: none;
@@ -34,13 +38,11 @@ a {
 }
 .nav .nav__list {
   font-size: 1.313rem;
-  font-weight: 300;
+  text-transform: uppercase;
 }
 .nav .nav__list .nav__item {
   display: inline-block;
   padding: 1rem;
-  font-size: 1.313rem;
-  font-weight: 400;
 }
 .nav .nav__list .nav__item .nav__shop {
   color: #5BACC3;
@@ -72,16 +74,14 @@ a {
   bottom: 20px;
 }
 .footer .footer__section {
-  margin: 1.25rem 0;
   display: inline-block;
   vertical-align: top;
   box-sizing: content-box;
-  margin: 0 6.25rem;
 }
 .footer .footer__section .footer__title {
   font-size: 2.063rem;
   font-weight: 300;
-  margin: 2.5rem 0;
+  margin: 2.3rem 0;
 }
 .footer .footer__section .footer__text {
   font-size: 1.125rem;
@@ -152,7 +152,6 @@ a {
   flex-wrap: wrap;
   font-size: 3.75rem;
   font-weight: 300;
-  text-align: center;
   color: #FFF;
 }
 .banner .banner__title-box .banner__title-box--border {
@@ -163,7 +162,7 @@ a {
 
 .sub-nav {
   background: #393939;
-  padding: 1rem;
+  padding: 0.3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -173,7 +172,7 @@ a {
   min-height: 3.75rem;
   max-height: 5rem;
   text-transform: uppercase;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 .sub-nav__item {
   font-size: 1.313rem;
@@ -183,7 +182,7 @@ a {
   padding: 0 2rem;
 }
 .sub-nav__item a {
-  color: white;
+  color: #FFF;
 }
 
 .menu {
@@ -197,15 +196,17 @@ a {
 }
 .menu .menu__category {
   padding: 1.7rem 0;
-  width: 60%;
   margin: auto;
   text-align: center;
   font-size: 1.125rem;
+  width: 100%;
+}
+.menu .menu__category:nth-child(2) {
+  background-color: #F7F7F7;
 }
 .menu .menu__category .menu__name {
   font-size: 3.75rem;
   font-weight: 300;
-  text-align: center;
 }
 .menu .menu__category .menu__item {
   font-size: 2.063rem;
@@ -216,11 +217,10 @@ a {
   font-style: italic;
   color: #393939;
   margin: 0.8rem 0;
+  max-width: 33rem;
+  display: inline-block;
+  text-align: center;
 }
 .menu .menu__category .menu__price {
   color: #5BACC3;
-}
-.menu .menu__coldDrinks {
-  background-color: #F7F7F7;
-  width: 100%;
 }/*# sourceMappingURL=menu.css.map */

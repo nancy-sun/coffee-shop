@@ -1,0 +1,24 @@
+$primary-pink: #FFF0ED;
+$primary-blue:#5BACC3;
+$neutral-graphite:#393939;
+$neutral-lightgray: #F7F7F7;
+$neutral-white: #FFF;
+$neutral-gray: #909090;
+$lighter-font: 300;
+$mid-text:1.313rem;
+$small-text: 1.125rem;
+
+@mixin section($background, $flex-direction, $padding) {
+    background: $background;
+    padding: $padding;
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin large-text {
+    font-size: 3.75rem;
+    font-weight: $lighter-font;
+}

@@ -1,18 +1,12 @@
-@use './partials/global'as *;
+@use "./partials/global"as *;
+@use "./partials/variables"as*;
 
-@mixin large-text {
-    font-size: 3.75rem;
-    font-weight: 300;
-    text-align: center;
-}
 
 
 .banner {
     @include section(center / cover no-repeat url("../assets/images/coffee-circle.jpg"), column, 1.2rem);
     min-height: 35.938rem;
     max-height: 37.5rem;
-
-
 
     .banner__title-box {
         min-width: 17.5rem;
@@ -40,22 +34,22 @@
 
 
 .sub-nav {
-    @include section($neutral-graphite, row, 1rem);
+    @include section($neutral-graphite, row, 0.3rem);
     width: 100%;
     min-height: 3.75rem;
     max-height: 5rem;
     text-transform: uppercase;
-    box-sizing: border-box;
+    box-sizing: content-box;
 
     &__item {
-        font-size: 1.313rem;
+        font-size: $mid-text;
         border-left: solid $primary-blue 4px;
         display: inline-block;
         text-align: center;
         padding: 0 2rem;
 
         & a {
-            color: white;
+            color: $neutral-white;
         }
     }
 }
@@ -64,12 +58,17 @@
 .menu {
     @include section($primary-pink, column, 1.3rem 0);
 
+
     .menu__category {
         padding: 1.7rem 0;
-        width: 60%;
         margin: auto;
         text-align: center;
-        font-size: 1.125rem;
+        font-size: $small-text;
+        width: 100%;
+
+        &:nth-child(2) {
+            background-color: $neutral-lightgray;
+        }
 
         .menu__name {
             @include large-text;
@@ -77,14 +76,17 @@
 
         .menu__item {
             font-size: 2.063rem;
-            font-weight: 300;
+            font-weight: $lighter-font;
             text-align: center;
         }
 
         .menu__description {
             font-style: italic;
-            color: #393939;
+            color: $neutral-graphite;
             margin: 0.8rem 0;
+            max-width: 33rem;
+            display: inline-block;
+            text-align: center;
         }
 
         .menu__price {
@@ -92,8 +94,11 @@
         }
     }
 
-    .menu__coldDrinks {
-        background-color: $neutral-lightgrey;
-        width: 100%;
-    }
+
+    // .menu__cold-drinks {}
+
+
+
+
+
 }
